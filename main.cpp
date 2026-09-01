@@ -16,7 +16,11 @@ int main() {
     test.blue = 2;
     test.green = 3;
 
-    cout << test.red << endl;
-    cout << test.blue << endl;
-    cout << test.green << endl;
+    vector<Color> myVec;
+
+    myVec.push_back(test);    
+
+    cout << myVec[0].red << endl;
+    cout << myVec[0].blue << endl;
+    cout << myVec[0].green << endl;
 }
