@@ -2,7 +2,6 @@
 #include <iostream>
 #include <random>
 #include <iomanip>
-#include <vector>
 
 using namespace std;
 
@@ -25,15 +24,18 @@ int main() {
 
     for(int i = 0; i < n; i++) {
         Color temp;
-        temp.blue = 1;
-        temp.red = 1;
-        temp.green = 1;
+        temp.blue = rand()%101;
+        temp.red = rand()%101;
+        temp.green = rand()%101;
         myVec.push_back(temp);
     }
 
-    for(int i = 0; i , n; i++) {
+    cout << setw(10) << "Color#" << setw(10) << "R value" << setw(10) << "G value" << "B value" << endl;
+    cout << setw(10) << "______" << setw(10) << "_______" << setw(10) << "_______" << "_______" << endl;
+
+    for(int i = 0; i < n; i++) {
         cout << left;
-        cout << setw(10) << myVec[i].red << setw(10) << myVec[i].green << setw(10) << myVec[i].blue << endl;
+        cout << setw(10) << i+1 << setw(10) << myVec[i].red << setw(10) << myVec[i].green << setw(10) << myVec[i].blue << endl;
     }
 
 }
