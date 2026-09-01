@@ -1,7 +1,8 @@
 //Maxwell Koegler | COMSC 210 | 9/1/26 | Lab 4
 #include <iostream>
-#include <vector>
 #include <random>
+#include <iomanip>
+#include <vector>
 
 using namespace std;
 
@@ -21,7 +22,7 @@ int main() {
     
     //vector cout
     int n = (rand() % 26) + 25;
-    
+
     for(int i = 0; i < n; i++) {
         Color temp;
         temp.blue = 1;
@@ -30,7 +31,9 @@ int main() {
         myVec.push_back(temp);
     }
 
-    cout << myVec[20].red << endl;
-    cout << myVec[20].blue << endl;
-    cout << myVec[20].green << endl;
+    for(int i = 0; i , n; i++) {
+        cout << left;
+        cout << setw(10) << myVec[i].red << setw(10) << myVec[i].green << setw(10) << myVec[i].blue << endl;
+    }
+
 }
